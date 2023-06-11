@@ -10,9 +10,15 @@ function clickBotao(){
     const entrada2 = document.querySelector('#entrada2')
     let saida = document.querySelector('#saida')
 
-    const randomNumber = getRandom(entrada1.value, entrada2.value)
+    if(entrada1.value < entrada2.value){
+        const randomNumber = getRandom(entrada1.value, entrada2.value)
+        saida.innerHTML = randomNumber   
+    }else{
+        alert("O primeiro número deve ser menor que o segundo número!")
+    }
 
-    saida.innerHTML = randomNumber   
+
+
 
 }
 
